@@ -9,7 +9,7 @@
             padding: 0 0 0 0;
         }
         body{
-            font-family: Calibri,Serif;
+            font-family: "Calibri",Serif;
             text-align: center;
         }
         img{
@@ -28,18 +28,24 @@
 </head>
 <body>
 <h1>MonkeyShuffle</h1>
-    <img src="">
-    <img src="">
-    <img src="">
-    <img src="">
-    <img src="">
-    <img src="">
-    <img src="">
-    <img src="">
+<div id="pics">
+    <img src="img3/Hamster1.jpg">
+    <img src="img3/Hamster2.jpg">
+    <img src="img3/Hamster3.jpg">
+    <img src="img3/Hamster4.jpg">
+    <img src="img3/Hamster5.jpg">
+    <img src="img3/Hamster6.jpg">
+    <img src="img3/Hamster7.jpg">
+    <img src="img3/Hamster8.jpg">
+    <img src="img3/Hamster9.jpg">
 </div>
 <script>
     var plaatjes = document.getElementsByTagName("img");
-    console.log(plaatjes)
+    var random = 0;
+    for(var i=0; i < plaatjes.length; i++ ) {
+        var random = Math.floor(Math.random()*9)+1;
+        plaatjes[5].src = "img/Hamster"+random+".jpg";
+    }
 </script>
 </body>
 </html>
