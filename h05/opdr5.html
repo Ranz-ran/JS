@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Choose yer Hamster</title>
+    <style>
+
+        body{
+            font-family: 'Calibri', Serif;
+            text-align: center;
+        }
+        div.hamsterpicture{
+            box-sizing: border-box;
+            height: 450px;
+            width: 300px;
+            float: left;
+            background-color: red;
+            border: solid 1px black;
+        }
+
+        #pics {
+            width:  900px;
+            height: 1450px;
+            border: solid 1px black;
+            font-size:  0px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<h1>Hamster chooser</h1>
+<h3>Choose yer favorite hamster!</h3>
+<div id="pics">
+
+</div>
+<script>
+    pics = document.getElementById("pics")
+    createPicsHolders();
+
+    function createPicsHolders() {
+        for(var i = 0; i < 9; i++) {
+            pictureHolder = document.createElement("div")
+            pictureHolder.className = "hamsterpicture";
+            pictureHolder.id = "picture-holder" + i;
+            pics.appendChild(pictureHolder);
+        }
+    }
+
+    function createAapImages(){
+pictureHolders = document.getElementsByClassName("aap")
+    }
+</script>
+</body>
+</html>
