@@ -66,8 +66,14 @@
            favoriet.className = "favoriet";
            aapPlaatje = document.createElement("img");
            aapPlaatje.src = "../h03/img3/Hamster" + (i+1) + ".jpg";
+           aapPlaatje.addEventListener("click",maakFavoriet)
+           pictureHolders[i].appendChild(favoriet);
            pictureHolders[i].appendChild(aapPlaatje);
        }
+    }
+
+    function maakFavoriet() {
+        console.log("Maak mij Favoriet!")
     }
 
 </script>
