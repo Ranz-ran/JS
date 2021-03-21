@@ -23,6 +23,9 @@
             width: 300px;
             height: 150px;
             background-color: blue;
+            background-image: none;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         #pics {
@@ -64,16 +67,28 @@
        for (var i = 0; i < pictureHolders.length; i ++){
            favoriet = document.createElement("div");
            favoriet.className = "favoriet";
+           favoriet.id = "favoriet_"+(i+1);
            aapPlaatje = document.createElement("img");
            aapPlaatje.src = "../h03/img3/Hamster" + (i+1) + ".jpg";
-           aapPlaatje.addEventListener("click",maakFavoriet)
+           aapPlaatje.id = (i+1);
+           aapPlaatje.addEventListener("click", function() {
+               maakFavoriet(this.id);
+           });
            pictureHolders[i].appendChild(favoriet);
            pictureHolders[i].appendChild(aapPlaatje);
        }
     }
 
-    function maakFavoriet() {
-        console.log("Maak mij Favoriet!")
+    function maakFavoriet(id) {
+        console.log("Maak mij Favoriet! Het gaat om hamster ..."+ id);
+        notsofavoriet = document.getElementsByClassName("favoriet");
+
+        for (var i = 0; i < notsofavoriet.length; i++){
+            notsofavoriet[i].style.backgroundImage = "none";
+        }
+
+        fvoriet = document.getElementById("favoriet_" + id);
+        favoriet.style.backgroundImage = "url('../h03/img3/heart.png')";
     }
 
 </script>
