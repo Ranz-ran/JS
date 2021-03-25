@@ -47,8 +47,8 @@
 <h1>Hamster chooser</h1>
 <h3>Choose yer favorite hamster!</h3>
 <div id="pics">
-
 </div>
+
 <script>
     pics = document.getElementById("pics")
     createPicsHolders();
@@ -87,7 +87,7 @@
         for (var i = 0; i < notsofavoriet.length; i+=1) {
             notsofavoriet[i].style.backgroundImage = "none";
 
-            fvoriet = document.getElementById("favoriet_" + id);
+            favoriet = document.getElementById("favoriet_" + id);
             favoriet.style.backgroundImage = "url('../h03/img3/heart.png')";
         }
     }
